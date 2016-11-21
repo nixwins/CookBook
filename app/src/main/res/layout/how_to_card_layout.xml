@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/how_to_main_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="centerCrop"
+            android:src="@drawable/testcook" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ingredient"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:background="@color/colorIngredient"
+            android:textColor="@color/cardview_light_background"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
+        <TextView
+                android:id="@+id/how_to_ingredient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:background="@color/colorCardV"
+                android:textColor="@color/cardview_dark_background"
+                android:text="Expandable Layout provides an easy way to create a view called header with an expandable view. Views are external layout to allow a maximum of customization."
+               />
+
+        <TextView
+            android:id="@+id/how_to_cook_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/howt_to_btn"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:drawableRight="@android:drawable/arrow_down_float"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_dark_background"
+            android:textAllCaps="true"
+            android:background="@color/colorHowtoBtn"/>
+        <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+            android:id="@+id/how_to_expandableLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/expandableButton1"
+            android:background="@color/colorFullText"
+            android:padding="16dp"
+            app:ael_duration="400"
+            app:ael_expanded="true"
+            app:ael_interpolator="bounce"
+            app:ael_orientation="vertical">
+
+            <TextView
+                android:id="@+id/how_to_cook_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/cardview_dark_background"
+                android:text="Expandable Layout provides an easy way to create a view called header with an expandable view. Views are external layout to allow a maximum of customization."
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>
